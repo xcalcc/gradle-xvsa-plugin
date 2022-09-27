@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'groovy'
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile gradleApi()
+    // https://mvnrepository.com/artifact/org.json/json
+    // compile group: 'org.json', name: 'json', version: '20190722'
+}
+
+group = 'io.xc5.plugin'
+version = '1.0'
+
+apply plugin: 'maven'

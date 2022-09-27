@@ -1,0 +1,14 @@
+image: gradle:5
+
+stages:
+  - build
+
+before_script:
+  - chmod +x gradlew
+
+build:
+  stage: build
+  script: ./gradlew uploadArchives
+  artifacts:
+    paths:
+      - build/libs/*.jar
